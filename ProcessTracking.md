@@ -3,3 +3,5 @@
 3/13/2024 : 11:38AM : 33/541 (Learn and implemented the Higher And Lower game in both Procedure and OOP approach by myself)
 
 3/16/2024: 11:34AM : 47/541 (Built and conducted the implementation of the Bank Simulation in OOP by myself)
+
+3/18/2024: 1:11PM : 62/541 (Trying to understand the core concepts of Class and instantiation)
