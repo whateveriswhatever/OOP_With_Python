@@ -8,10 +8,13 @@ class Television:
             self._programs = programs # requires user having to assign only 8 TV programs, shows, or podcasts that they want to add
     
         self._is_muted = False
-        self._volumn = 0
+        self._volumn = 12
         self._isOn = False
         self._program_index = 0
-    
+        self._volumn_history = []
+            
+        
+        
     def switch_on(self):
         if self._isOn:
             print("The TV has actually been turned on before !")
@@ -47,7 +50,11 @@ class Television:
         #     self._is_muted = False
         # else:
         #     self._is_muted = True
-        self._is_muted = False if self._is_muted else True
+        # self._is_muted = False if self._is_muted else True
+        self._is_muted = not self._is_muted # toggling
+    
+    def is_muted(self):
+        return self._is_muted
     
     def drain_downright_the_volumn(self):
         self._volumn = 0
@@ -57,7 +64,16 @@ class Television:
     
     def mute(self):
         currVolumn = self.get_current_volumn()
-        self.drain_downright_the_volumn() if self.set_mute() else self.custom_current_volumn_by_parameter(currVolumn)
+        self._volumn_history.append(currVolumn)
+        self.drain_downright_the_volumn() if self.is_muted() else self.custom_current_volumn_by_parameter(currVolumn)
+    
+    def unmute(self):
+        # if self.get_current_volumn() == 0 or self._is_muted:
+        #     self._is_muted = False
+        #     self.louder()
+        self._is_muted = False
+        # self.louder()
+        self._volumn = self._volumn_history[-1]
     
     def get_current_volumn(self):
         return self._volumn
@@ -77,13 +93,20 @@ class Television:
             currentNum += 1
         
         print("Keyboard's info: {}".format(keyboard))
+        return keyboard
     
     
     def move_to_next_channel(self):
-        self._program_index += 1
+        if self._program_index < 9:
+            self._program_index += 1
+        else:
+            self._program_index = 0
     
     def move_to_previous_channel(self):
-        self._program_index -= 1
+        if self._program_index > 1:
+            self._program_index -= 1
+        else:
+            self._program_index = 0
     
     def channel_navigator(self, option):
         if option == "Next":
@@ -100,7 +123,9 @@ class Television:
         self._program_index = programIdx
     
     def get_current_channel(self):
-        return self._programs[self._program_index]
+        # return self._programs[self._program_index]
+        keyboard_controller = self.initalize_keyboard()
+        return keyboard_controller[self._program_index]
     
     def perceive_info(self):
         currChannel = self.get_current_channel()
@@ -112,5 +137,21 @@ myTelevision = Television()
 myTelevision.initalize_keyboard()
 myTelevision.perceive_info()
 
+myTelevision.navigate_to_channel_from_keyboard(5)
+myTelevision.perceive_info()
+
+
+
+myTelevision.set_mute()
+myTelevision.mute()
+
+# myTelevision.set_mute()
+# myTelevision.mute()
+myTelevision.unmute()
+myTelevision.perceive_info()
+
+myTelevision.move_to_next_channel()
+myTelevision.perceive_info()
+# myTelevision.move_to_next_channel()
 
     
