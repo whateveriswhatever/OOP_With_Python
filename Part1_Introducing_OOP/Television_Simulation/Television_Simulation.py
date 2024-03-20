@@ -131,27 +131,32 @@ class Television:
         currChannel = self.get_current_channel()
         currVolumn = self.get_current_volumn()
         print(">> Channel: {}\n>> Volumn: {}\n>> Muted: {}".format(currChannel, currVolumn, "Yes" if self._is_muted else "No"))
-            
+    
+    def auto_setup(self):
+        self.initalize_keyboard()
+        print("Setup completely !")
+        self.perceive_info()
 
-myTelevision = Television()
-myTelevision.initalize_keyboard()
-myTelevision.perceive_info()
+# myTelevision = Television()
+# myTelevision.initalize_keyboard()
+# myTelevision.perceive_info()
 
-myTelevision.navigate_to_channel_from_keyboard(5)
-myTelevision.perceive_info()
+# myTelevision.navigate_to_channel_from_keyboard(5)
+# myTelevision.perceive_info()
 
 
-
-myTelevision.set_mute()
-myTelevision.mute()
 
 # myTelevision.set_mute()
 # myTelevision.mute()
-myTelevision.unmute()
-myTelevision.perceive_info()
 
-myTelevision.move_to_next_channel()
-myTelevision.perceive_info()
+# # myTelevision.set_mute()
+# # myTelevision.mute()
+# myTelevision.unmute()
+# myTelevision.perceive_info()
+
 # myTelevision.move_to_next_channel()
+# myTelevision.perceive_info()
+# # myTelevision.move_to_next_channel()
 
-    
+# print("Object scopes inner my television : {}".format(vars(myTelevision)))
+
