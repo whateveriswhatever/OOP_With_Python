@@ -5,3 +5,5 @@
 3/16/2024: 11:34AM : 47/541 (Built and conducted the implementation of the Bank Simulation in OOP by myself)
 
 3/18/2024: 1:11PM : 62/541 (Trying to understand the core concepts of Class and instantiation)
+
+3/20/24: 9:36PM : 103/541 (Trying to understand the technique of manipulating multiple instances of object)
