@@ -13,3 +13,5 @@
 3/22/24: 8:37AM : 131/541 (Try/Except and raise in Python)
 
 3/22/24: 10:59AM : 138/541 (Building a dashboard game that reminiscents to chess)
+
+3/22/24: 12:02AM : 150/541 (Part 2: Python GUIs with Pygame)
