@@ -230,15 +230,15 @@ class Bank:
             
         
     
-BIDV = Bank("BIDV")
+# BIDV = Bank("BIDV")
 
-BIDV.erect_account("Toru Wick", "asdasdasd", "6996")
-BIDV.erect_account("La Thieu", "asdasdasd", "6926")
-BIDV.erect_account("Son Bui", "asdasdasd", "69121")
-BIDV.erect_account("Lam Nguyen", "asdasdasd", "1123")
+# BIDV.erect_account("Toru Wick", "asdasdasd", "6996")
+# BIDV.erect_account("La Thieu", "asdasdasd", "6926")
+# BIDV.erect_account("Son Bui", "asdasdasd", "69121")
+# BIDV.erect_account("Lam Nguyen", "asdasdasd", "1123")
 
-BIDV.manifest_all_accounts()
-BIDV.look_up_account("Son Bui")
-BIDV.look_up_account("Lam Nguyen")
+# BIDV.manifest_all_accounts()
+# BIDV.look_up_account("Son Bui")
+# BIDV.look_up_account("Lam Nguyen")
 
-BIDV.sending_money_from_C2C("Son Bui", "Lam Nguyen")
+# BIDV.sending_money_from_C2C("Son Bui", "Lam Nguyen")
