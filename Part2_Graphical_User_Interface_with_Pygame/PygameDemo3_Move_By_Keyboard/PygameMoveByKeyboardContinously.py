@@ -19,6 +19,7 @@ TARGET_WIDTH = 120
 TARGET_HEIGHT = 120
 N_PIXELS_TO_MOVE = 69
 
+
 # 3 - Initialize the game
 pygame.init()
 
@@ -47,30 +48,38 @@ while True:
             pygame.quit()
             sys.exit()
         
-        # see if user clicked
-        elif event.type == pygame.KEYDOWN:
-            # mouseX, mouseY = event.pos
-            # could do this, if we needed it
-            # check if the click was in the rect of the ball
-            # if so, choose a random new location
-            # if ballRect.collidepoint(event.pos):
-            #     ballX = random.randrange(MAX_WIDTH)
-            #     ballY = random.randrange(MAX_HEIGHT)
-            #     ballRect = pygame.Rect(ballX, ballY, BALL_WIDTH, BALL_HEIGHT)
-            if event.key == pygame.K_LEFT:
-                ballX -= N_PIXELS_TO_MOVE
-            elif event.key == pygame.K_RIGHT:
-                ballX += N_PIXELS_TO_MOVE
-            elif event.key == pygame.K_UP:
-                ballY -= N_PIXELS_TO_MOVE
-            elif event.key == pygame.K_DOWN:
-                ballY += N_PIXELS_TO_MOVE
+        # # check for user pressing keys
+        # elif event.type == pygame.KEYDOWN:
+            
+        #     if event.key == pygame.K_LEFT:
+        #         ballX -= N_PIXELS_TO_MOVE
+        #     elif event.key == pygame.K_RIGHT:
+        #         ballX += N_PIXELS_TO_MOVE
+        #     elif event.key == pygame.K_UP:
+        #         ballY -= N_PIXELS_TO_MOVE
+        #     elif event.key == pygame.K_DOWN:
+        #         ballY += N_PIXELS_TO_MOVE
             
     
     # 8 - Do any "per frame" actions
+    # check for user pressing keys
+    if keyPressedTuple[pygame.K_LEFT]:
+        ballX -= N_PIXELS_TO_MOVE
+    elif keyPressedTuple[pygame.K_RIGHT]:
+        ballX += N_PIXELS_TO_MOVE
+    elif keyPressedTuple[pygame.K_UP]:
+        ballY -= N_PIXELS_TO_MOVE
+    elif keyPressedTuple[pygame.K_DOWN]:
+        ballY += N_PIXELS_TO_MOVE 
+    elif keyPressedTuple[pygame.K_q]:
+        print("Press 'q' to cancel the program !!!")
+        pygame.quit()
+        sys.exit()
     
     # check if the ball is colliding with the target
     ballRect = pygame.Rect(ballX, ballY, BALL_WIDTH, BALL_HEIGHT)
+    keyPressedTuple = pygame.key.get_pressed()
+    
     
     if ballRect.colliderect(targetRect):
         print("Ball is touching the target")
