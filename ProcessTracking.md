@@ -17,3 +17,5 @@
 3/22/24: 12:02AM : 150/541 (Part 2: Python GUIs with Pygame)
 
 3/23/24: 5:17PM : 160/541 (Learning how to construct a small a program with pygame and a basic template)
+
+3/26/24: 2:46PM : 168/541 (Learning how to control objects in pygame by using keyboard)
