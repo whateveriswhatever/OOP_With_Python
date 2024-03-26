@@ -19,3 +19,5 @@
 3/23/24: 5:17PM : 160/541 (Learning how to construct a small a program with pygame and a basic template)
 
 3/26/24: 2:46PM : 168/541 (Learning how to control objects in pygame by using keyboard)
+
+3/26/24: 3:15PM : 171/541 (Reaching to Reactangle concepts in pygame)
