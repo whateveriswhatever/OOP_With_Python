@@ -21,3 +21,9 @@
 3/26/24: 2:46PM : 168/541 (Learning how to control objects in pygame by using keyboard)
 
 3/26/24: 3:15PM : 171/541 (Reaching to Reactangle concepts in pygame)
+
+3/28/24: 9:42AM : 178/541 (Learning how to embedd sound themes inner Pygame App and how to draw an custom shapes in Pygame )
+
+3/28/24: 10:31AM : 184/541 (Moving to the chapter 6: Object-Oriented Pygame)
+
+3/29/24: 11:32AM: 198/541 (Landing to the section Simple Button in chapter 6: Object-Oriented Pygame)
